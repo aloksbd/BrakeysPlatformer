@@ -42,6 +42,7 @@ func _physics_process(delta):
 	motion = move_and_slide(motion,UP)
 	
 func _process(delta):
+	
 	if Input.is_action_pressed("catch"):
 		if bullet != null:
 			print("caught")

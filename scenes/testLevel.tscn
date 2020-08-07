@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://scenes/platform.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/player.tscn" type="PackedScene" id=2]
@@ -6,12 +6,113 @@
 [ext_resource path="res://scenes/tree.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/bush.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/water.tscn" type="PackedScene" id=6]
+[ext_resource path="res://images/Sprite-0001 Tile.png" type="Texture" id=7]
+[ext_resource path="res://images/Evil pg.png" type="Texture" id=8]
+[ext_resource path="res://images/Spikes.png" type="Texture" id=9]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 0, 0, 21, 0, 21, 21, 0, 21 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 0, 0, 21, 0, 21, 21, 0, 21 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 0, 0, 21, 0, 21, 21, 0, 21 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 0, 0, 21, 0, 21, 21, 0, 21 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+points = PoolVector2Array( 0, 0, 21, 0, 21, 21, 0, 21 )
+
+[sub_resource type="ConvexPolygonShape2D" id=6]
+points = PoolVector2Array( 0, 0, 21, 0, 21, 21, 0, 21 )
+
+[sub_resource type="ConvexPolygonShape2D" id=7]
+points = PoolVector2Array( 0, 0, 21, 0, 21, 21, 0, 21 )
+
+[sub_resource type="ConvexPolygonShape2D" id=8]
+points = PoolVector2Array( 0, 0, 21, 0, 21, 21, 0, 21 )
+
+[sub_resource type="TileSet" id=9]
+0/name = "Sprite-0001 Tile.png 0"
+0/texture = ExtResource( 7 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 1, 0, 189, 63 )
+0/tile_mode = 1
+0/autotile/bitmask_mode = 1
+0/autotile/bitmask_flags = [ Vector2( 0, 0 ), 432, Vector2( 0, 1 ), 438, Vector2( 0, 2 ), 54, Vector2( 4, 0 ), 504, Vector2( 4, 1 ), 511, Vector2( 4, 2 ), 63, Vector2( 8, 0 ), 216, Vector2( 8, 1 ), 219, Vector2( 8, 2 ), 27 ]
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 21, 21 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 2 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 8, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 8, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 4, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 6 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 4, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 7 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 4, 2 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 8 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
 
 [node name="testLevel" type="Node2D"]
 
 [node name="tree" parent="." instance=ExtResource( 4 )]
 position = Vector2( 0, -31 )
-tile_data = PoolIntArray( 1, 0, 0, 2, 0, 0, 3, 0, 0 )
+tile_data = PoolIntArray( 1, 0, 0, 2, 0, 0 )
 
 [node name="bush" parent="." instance=ExtResource( 5 )]
 position = Vector2( 0, -31 )
@@ -19,14 +120,26 @@ tile_data = PoolIntArray( 65537, 0, 0, 65539, 0, 0 )
 
 [node name="water" parent="." instance=ExtResource( 6 )]
 position = Vector2( 0, -31 )
-tile_data = PoolIntArray( 131076, 0, 0 )
+scale = Vector2( 0.5, 0.5 )
+tile_data = PoolIntArray( 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0 )
 
 [node name="platform" parent="." instance=ExtResource( 1 )]
 position = Vector2( 0, -31 )
-tile_data = PoolIntArray( 17, 0, 0, 18, 0, 8, 65553, 0, 131072, 65554, 0, 131080, 131087, 0, 0, 131088, 0, 8, 196623, 0, 131072, 196624, 0, 131080, 262156, 0, 0, 262157, 0, 4, 262158, 0, 8, 327692, 0, 131072, 327693, 0, 131076, 327694, 0, 131080, 393219, 0, 0, 393220, 0, 4, 393221, 0, 4, 393222, 0, 4, 393223, 0, 4, 393224, 0, 4, 393225, 0, 4, 393226, 0, 4, 393227, 0, 8, 458755, 0, 65536, 458756, 0, 65540, 458757, 0, 65540, 458758, 0, 65540, 458759, 0, 65540, 458760, 0, 65540, 458761, 0, 65540, 458762, 0, 65540, 458763, 0, 65544, 524291, 0, 131072, 524292, 0, 131076, 524293, 0, 131076, 524294, 0, 131076, 524295, 0, 131076, 524296, 0, 131076, 524297, 0, 131076, 524298, 0, 131076, 524299, 0, 131080 )
+tile_set = SubResource( 9 )
+tile_data = PoolIntArray( 327667, 0, 0, 327668, 0, 8, 393203, 0, 65536, 393204, 0, 0, 393205, 0, 4, 393206, 0, 4, 393207, 0, 4, 393208, 0, 8, 458739, 0, 131072, 458740, 0, 131076, 458741, 0, 131076, 458742, 0, 131076, 458743, 0, 131076, 458744, 0, 131080, 458747, 0, 0, 458748, 0, 4, 458749, 0, 4, 458750, 0, 8, 393219, 0, 0, 393220, 0, 4, 393221, 0, 4, 393222, 0, 4, 393223, 0, 4, 393224, 0, 4, 393225, 0, 4, 393226, 0, 4, 393227, 0, 8, 524283, 0, 131072, 524284, 0, 131076, 524285, 0, 131076, 524286, 0, 131080, 458755, 0, 65536, 458756, 0, 65540, 458757, 0, 65540, 458758, 0, 65540, 458759, 0, 65540, 458760, 0, 65540, 458761, 0, 65540, 458762, 0, 65540, 458763, 0, 65544, 524291, 0, 131072, 524292, 0, 131076, 524293, 0, 131076, 524294, 0, 131076, 524295, 0, 131076, 524296, 0, 131076, 524297, 0, 131076, 524298, 0, 131076, 524299, 0, 131080 )
 
 [node name="KinematicBody2D2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 173.361, 92.761 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 75.7972, 87.3891 )
+
+[node name="Evil pg" type="Sprite" parent="."]
+position = Vector2( -69.6591, 64.8636 )
+texture = ExtResource( 8 )
+
+[node name="Spikes" type="Sprite" parent="."]
+position = Vector2( -193.163, 72.2374 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 9 )
+offset = Vector2( 58.6828, -23.8388 )

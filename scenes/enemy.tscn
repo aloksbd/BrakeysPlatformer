@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://images/droneRed.png" type="Texture" id=1]
+[ext_resource path="res://images/Evil pg.png" type="Texture" id=1]
 [ext_resource path="res://scripts/enemy.gd" type="Script" id=2]
 
 [sub_resource type="Animation" id=1]
@@ -45,12 +45,13 @@ tracks/2/keys = {
 } ]
 }
 
-[node name="KinematicBody2D" type="KinematicBody2D"]
+[node name="enemy" type="KinematicBody2D"]
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -16 )
+scale = Vector2( -1, 1 )
 texture = ExtResource( 1 )
-hframes = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/revive = SubResource( 1 )
